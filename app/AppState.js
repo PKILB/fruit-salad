@@ -10,6 +10,9 @@ class AppState extends EventEmitter {
   
   /** @type {import('./Models/Player').Player[]} */
   players = loadState('players', [Player])
+  
+  /** @type {import('./Models/Player').Player|null} */
+  player = null
 }
 
 export const appState = new Proxy(new AppState(), {
