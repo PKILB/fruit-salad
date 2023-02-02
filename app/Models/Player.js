@@ -13,9 +13,9 @@ export class Player {
     get ScoreTemplate() {
         return `
         <div class="d-flex justify-content-between align-items-center px-3">
-        <h2>Garfield</h2>
+        <h2 onclick="app.playersController.deletePlayer('${this.id}')">${this.name.toUpperCase()}</h2>
         <p class="fs-4">------------</p>
-        <h3>24</h3>
+        <h3>${this.score}</h3>
         </div>`
     }
 }

@@ -38,5 +38,18 @@ addPlayer() {
     }
 }
 
+async deletePlayer(playerId) {
+    try {
+        let yes = await Pop.confirm('Are You Sure You Want To Delete This Player?')
+        if(!yes){
+            return
+        }
+        playersService.deletePlayer(playerId)
+    } catch (error) {
+        Pop.error(error)
+
+    }
+}
+
 
 }

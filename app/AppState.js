@@ -9,14 +9,7 @@ class AppState extends EventEmitter {
   values = loadState('values', [Value])
   
   /** @type {import('./Models/Player').Player[]} */
-  players = [
-      new Player(
-        {
-          name: 'Garfield'
-        }
-      )
-    
-  ]
+  players = loadState('players', [Player])
 }
 
 export const appState = new Proxy(new AppState(), {
