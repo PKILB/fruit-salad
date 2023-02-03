@@ -21,6 +21,12 @@ deletePlayer(playerId) {
     saveState('players', appState.players)
 }
 
+setActivePlayer(playerId) {
+    
+    let player = appState.players.find(p => p.id == playerId)
+    appState.player = player
+}
+
 }
 
 export const playersService = new PlayersService()

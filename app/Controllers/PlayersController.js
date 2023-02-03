@@ -15,6 +15,11 @@ function _drawPlayers() {
     setHTML('players', template)
 }
 
+function _drawPlayer() {
+    let player = appState.player
+    // setHTML('player', a)
+}
+
 
 
 
@@ -51,5 +56,9 @@ async deletePlayer(playerId) {
     }
 }
 
+
+setActivePlayer(playerId) {
+    playersService.setActivePlayer(playerId)
+}
 
 }

@@ -14,8 +14,10 @@ export class Player {
         return `
         <div class="d-flex justify-content-between align-items-center px-3">
         <h2 onclick="app.playersController.deletePlayer('${this.id}')">${this.name.toUpperCase()}</h2>
-        <p class="fs-4">------------</p>
+        <p data-bs-toggle="modal" data-bs-target="#playerModal" class="fs-4" onclick="app.playersController.setActivePlayer('${this.id}')">------------</p>
         <h3>${this.score}</h3>
         </div>`
     }
 }
+
+// onclick="app.playersController.setActivePlayer('${this.id}')"
